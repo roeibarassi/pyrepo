@@ -20,12 +20,11 @@ def checkDup(detailedFilesList):
 
 ##Main
 def main():
-    searchDir = 'c:\\temp\\logs1'
+    searchDir = 'c:\\temp\\logs'
     filesList = []
     if os.path.exists(searchDir):
         for path, dirs, files in os.walk(searchDir):
             for filename in files:
-                #tempList = [os.path.join(path, filename) ,  md5sum(os.path.join(path, filename))]
                 filesList.append([os.path.join(path, filename) ,  md5sum(os.path.join(path, filename))])
         print checkDup(filesList)
     else:
