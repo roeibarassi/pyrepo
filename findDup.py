@@ -20,7 +20,7 @@ def checkDup(detailedFilesList):
 
 ##Main
 def main():
-    searchDir = 'c:\\temp\\logs'
+    searchDir = 'c:\\temp\\logs1'
     filesList = []
     if os.path.exists(searchDir):
         for path, dirs, files in os.walk(searchDir):
